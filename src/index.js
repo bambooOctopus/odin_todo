@@ -1,5 +1,5 @@
 import './style.css';
-import { hello } from './projectFormModule.js';
+import { projectForm } from './projectFormModule.js';
 
-hello();
+projectForm();
 
