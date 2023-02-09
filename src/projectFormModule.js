@@ -6,6 +6,7 @@ const projectForm = () => {
     projectFormDiv.classList.add("form-div");
 
     const projectForm = document.createElement("form");
+    projectForm.id = "projectForm";
 
     const projectLabel = document.createElement("label");
     projectLabel.textContent = "project name: "
