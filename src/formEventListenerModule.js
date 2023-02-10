@@ -1,4 +1,5 @@
 import { projectFactory } from './projectFactoryModule'
+import { clearInput } from './domModule';
 
 
 
@@ -15,6 +16,7 @@ const formEventListener = (wallet) => {
         if (walletObj != undefined) {
             let proj = projectFactory(event.target[0].value)
             walletObj.addProject(proj);
+            clearInput();
             console.log(walletObj.projectWalletArray)
         }
         

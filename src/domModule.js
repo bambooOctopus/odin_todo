@@ -18,6 +18,7 @@ const homeScreen = () => {
 };
 
 const clearProjDiv = () => {
+    
     const projDiv = document.getElementById("proj-div");
     projDiv.innerHTML = "";
 };
@@ -32,4 +33,10 @@ const displayProjects = (wallet) => {
     }
 };
 
-export { homeScreen, displayProjects }
+const clearInput = () => {
+    const textInput = document.querySelector("input");
+    textInput.value = "";  
+    textInput.focus();  
+}
+
+export { homeScreen, displayProjects, clearInput }
