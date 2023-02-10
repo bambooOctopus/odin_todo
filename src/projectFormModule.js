@@ -1,3 +1,5 @@
+import { formEventListener } from "./formEventListenerModule.js";
+
 const projectForm = () => {
     const contentDiv = document.getElementById("content");
 
@@ -23,9 +25,12 @@ const projectForm = () => {
     projectForm.appendChild(projectTextInput);
     projectForm.appendChild(submitBtn);
 
+    
     projectFormDiv.appendChild(projectForm);
     
     contentDiv.appendChild(projectFormDiv);
+
+    formEventListener();
 }
 
 export { projectForm }
