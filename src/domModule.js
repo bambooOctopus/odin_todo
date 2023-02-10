@@ -1,4 +1,6 @@
 import { projectForm } from "./projectFormModule.js";
+import { makeProjDomElement } from "./makeProjDomElementModule.js";
+import { createProjDiv } from "./projDivModule.js";
 
 const displayWalletProjects = (wallet) => {
     console.log("hello from display wallet projects");
@@ -10,13 +12,23 @@ const displayWalletProjects = (wallet) => {
 
 const homeScreen = () => {
     // 1. display the project form
-    projectForm()       
+    projectForm();  
+    // 2. add projDiv to the dom     
+    createProjDiv();
+};
+
+const clearProjDiv = () => {
+    const projDiv = document.getElementById("proj-div");
+    projDiv.innerHTML = "";
 };
 
 const displayProjects = (wallet) => {
-    //this should make the projects into a dom element and update the dom
+    //this should feed makeProjDomElements all the projects in the wallet.
+    
     if (wallet.length > 0) {
-        wallet.forEach(project => console.log(project));
+        clearProjDiv();
+       
+        wallet.forEach(project => makeProjDomElement(project));
     }
 };
 

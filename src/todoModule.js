@@ -12,8 +12,10 @@ const todoLoop = () => {
     const home = () => {
         homeScreen();                
         displayProjects(todoWallet);        
-        formEventListener(todoWallet);        
+        formEventListener(todoWallet);             
         displayProjects(todoWallet);
+        
+
     }
 
 
