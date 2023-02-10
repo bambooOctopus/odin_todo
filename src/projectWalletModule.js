@@ -1,5 +1,14 @@
 const projectWallet = () => { 
-    console.log("project wallet");
+    const projectWalletArray = []
+
+    const addProject = (project) => {
+        projectWalletArray.push(project);
+    }
+
+    
+    
+
+    return { projectWalletArray, addProject }
 };
 
 export { projectWallet }
