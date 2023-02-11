@@ -16,16 +16,22 @@
 }
 
 .proj-div {
-    width: 1000px;
-    height: 1000px;
-    background-color: lightgray;
+    
+    margin-top: 2rem;
+    
     color: black;
-    border: solid 1px black;
+    
+
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 3rem;
+    
 }
 
 .proj {
     width: 100px;
     height: 100px;
     border: solid 1px blue;
+    padding: 1rem;
     
 }
