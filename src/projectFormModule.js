@@ -15,6 +15,7 @@ const projectForm = () => {
 
     const projectTextInput = document.createElement("input");
     projectTextInput.classList.add("text-input");
+    
 
     const submitBtn = document.createElement("input");
     submitBtn.type = "submit";
@@ -29,6 +30,8 @@ const projectForm = () => {
     projectFormDiv.appendChild(projectForm);
     
     contentDiv.appendChild(projectFormDiv);
+
+    projectTextInput.focus();
 
     formEventListener();
 }
