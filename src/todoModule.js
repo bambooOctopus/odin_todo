@@ -1,6 +1,6 @@
 import { wallet } from "./walletModule.js";
-import { projectForm } from "./formsModule.js";
 import { homeScreen, projScreen } from "./domUpdateModule.js";
+import { listen } from "./eventListeners.js";
 
 const todo = () => {
     const projectWallet = wallet();
@@ -9,7 +9,8 @@ const todo = () => {
 
     const home = () => {        
         console.log("#home");
-        homeScreen();       
+        homeScreen();  
+        listen();     
 
         //this will run homeScreen(); which will be in domUpdateModule
         // homeScreen() will build out an entire view/screen 
