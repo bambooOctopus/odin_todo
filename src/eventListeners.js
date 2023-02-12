@@ -43,11 +43,21 @@ const projGridListener = (wallet) => {
 const projCardListener = (wallet) => {
     const projGrid = document.getElementById("proj-grid-div");
 
-    projGrid.addEventListener("click", (event) => {        
+    projGrid.addEventListener("click", (event) => { 
+        console.log("this is the event-------------------------------------")       
+        console.log(event)
+        console.log("this is the event-------------------------------------")       
         const projId = event.target.id.split("-")[2];
         const project = wallet.getProject(projId);
+
+        if (project === undefined) {
+            return;
+        }
+        else {
+            projScreen(project);            
+        }
         
-        projScreen(project);
+        
         
         
 
