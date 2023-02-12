@@ -1,6 +1,6 @@
 const projCard = (proj, index) => {
     const card = document.createElement("div");
-    card.classList.add("proj");
+    card.classList.add("proj-card");
     card.id = "proj-card-" + index;
 
     const t = document.createElement("p");

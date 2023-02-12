@@ -33,6 +33,10 @@ const projGridListener = (wallet) => {
             wallet.removeProject(projId)
             // 2. refresh the proj-grid-div  
         }
+        else if (event.target.classList == "proj-card") {
+
+            console.log("proj-card-id: " + event.target.id);
+        };
     });
 };
 
