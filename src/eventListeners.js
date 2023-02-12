@@ -1,5 +1,6 @@
 import { project } from "./projectModule";
 
+
 const projectFormListener = (wallet) => {
     const projectForm = document.getElementById("project-form");
     
@@ -16,6 +17,7 @@ const projectFormListener = (wallet) => {
         console.log(wallet);
         event.target[0].value = "";
         event.target[0].focus();
+        
     });
 };
 
@@ -24,6 +26,7 @@ const projectFormListener = (wallet) => {
 const listen = (wallet) => {
     // fire off all the event listeners    
     projectFormListener(wallet);
+    
 };
 
 export { listen }
