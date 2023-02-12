@@ -38,19 +38,7 @@ const body = () => {
 
 const layOut = () => {
     const contentDiv = document.getElementById("content");
-
-    const contentHeader = document.createElement("p");
-    contentHeader.textContent = header();
-    contentHeader.classList.add("big-letters");
-
-    const contentSideBar = document.createElement("p");
-    contentSideBar.textContent = sideBar();
-    contentSideBar.classList.add("big-letters");
-
-    const contentBody = document.createElement("p");
-    contentBody.textContent = body();
-    contentBody.classList.add("big-letters");
-
+    
      contentDiv.appendChild(header());
      contentDiv.appendChild(sideBar());
      contentDiv.appendChild(body());
@@ -85,8 +73,9 @@ const homeScreen = () => {
     
 };
 
-const projScreen = () => {
+const projScreen = (proj) => {
     layOut();
+    console.log(proj)
     // 1. layout
     // 2. project info 
     // 3. item form 

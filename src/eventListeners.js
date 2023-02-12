@@ -1,4 +1,5 @@
 import { project } from "./projectModule";
+import { projGridRefresh, projScreen } from "./domUpdateModule";
 
 
 const projectFormListener = (wallet) => {
@@ -21,6 +22,8 @@ const projectFormListener = (wallet) => {
     });
 };
 
+// 1. rename to mean only delete button listener
+// 2. make proj-card listener
 const projGridListener = (wallet) => {
     const projGrid = document.getElementById("proj-grid-div");
     projGrid.addEventListener("click", (event) => {
@@ -30,12 +33,7 @@ const projGridListener = (wallet) => {
             console.log("this is a button: " + event.target.id); 
             // 1. remove this element from the wallet
             const projId = event.target.id.split("-")[2];            
-            wallet.removeProject(projId)
-            // 2. refresh the proj-grid-div  
-        }
-        else if (event.target.classList == "proj-card") {
-
-            console.log("proj-card-id: " + event.target.id);
+            wallet.removeProject(projId)            
         };
     });
 };
