@@ -120,3 +120,10 @@
     overflow: scroll;
     
 }
+
+.proj-main-div {
+    height: 600px;
+    width: 600px;
+    border: solid 1px black;
+    border-radius: 6px;
+}

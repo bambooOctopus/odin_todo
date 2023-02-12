@@ -38,13 +38,31 @@ const projGridListener = (wallet) => {
     });
 };
 
+// this whole shit is you click on proj card you go to proj view page;
+// good luck with tath shit you peasant
+const projCardListener = (wallet) => {
+    const projGrid = document.getElementById("proj-grid-div");
+
+    projGrid.addEventListener("click", (event) => {        
+        const projId = event.target.id.split("-")[2];
+        const project = wallet.getProject(projId);
+        
+        projScreen(project);
+        
+        
+
+        // this dumb shit should be you click on the project card you go to the project page
+        //  come on now munky tits
+    });
+};
+
 
 //fired off in todoModule
 const listen = (wallet) => {
     // fire off all the event listeners    
     projectFormListener(wallet);
     projGridListener(wallet);
-    
+    projCardListener(wallet);
 };
 
 export { listen }

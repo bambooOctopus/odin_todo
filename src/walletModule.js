@@ -15,7 +15,15 @@ const wallet = () => {
 
     };
 
-    return { walletArray, addProject, removeProject }
+    const getProject = (index) => {
+        const project = walletArray[index];
+        console.log("index from get project----------------------");
+        console.log(index)
+        console.log("-----------------------------------")
+        return project
+    };
+
+    return { walletArray, addProject, removeProject, getProject }
 };
 
 export { wallet }

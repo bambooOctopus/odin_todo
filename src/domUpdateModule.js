@@ -1,5 +1,5 @@
 import { projectForm } from "./formsModule";
-import { projCard } from "./projCardModule";
+import { projGridCard, projMainCard } from "./projCardModule";
 
 
 const header = () => {
@@ -38,7 +38,7 @@ const body = () => {
 
 const layOut = () => {
     const contentDiv = document.getElementById("content");
-    
+
      contentDiv.appendChild(header());
      contentDiv.appendChild(sideBar());
      contentDiv.appendChild(body());
@@ -58,7 +58,7 @@ const projGridRefresh = (wallet) => {
 
     wallet.forEach((p, index) => {
         // 1. make a project card
-        let card = projCard(p, index);
+        let card = projGridCard(p, index);
         // 2. append card to projDiv
         projDiv.appendChild(card);
     });
@@ -74,8 +74,22 @@ const homeScreen = () => {
 };
 
 const projScreen = (proj) => {
-    layOut();
-    console.log(proj)
+    console.log("proj from projScreen up next-----------------");
+    console.log(proj);
+    console.log("-----------------------------------------------");
+    //layOut();
+
+    const projGridDiv = document.getElementById("proj-grid-div");
+    projGridDiv.innerHTML = "";
+
+    // make/return projMainCard, append it to projGridDiv
+    const projCard = projMainCard(proj);
+
+    projGridDiv.appendChild(projCard);
+
+
+    console.log("post layout()");
+    
     // 1. layout
     // 2. project info 
     // 3. item form 

@@ -1,4 +1,6 @@
-const projCard = (proj, index) => {
+// this is for proj-grid-div view
+// fired off in eventListeners
+const projGridCard = (proj, index) => {
     const card = document.createElement("div");
     card.classList.add("proj-card");
     card.id = "proj-card-" + index;
@@ -17,4 +19,30 @@ const projCard = (proj, index) => {
     return card
 };
 
-export { projCard }
+//this will be for proj view
+// fired off in eventListeners
+const projMainCard = (proj, index) => {
+
+    console.log("project from projMainCard: " + proj + " is next")
+    console.log(proj)
+    console.log("hello from projCard");
+
+    const projCard = document.createElement("div");
+    projCard.classList.add("proj-main-div");
+    projCard.id = "proj-main-div";
+
+    const header = document.createElement("p");
+    header.classList.add("big-letters");
+    header.textContent = proj.title;
+
+    const copyBody = document.createElement("p");
+    copyBody.textContent = "boiler plate text I can't remember the boiler plate copy thing";
+    
+    projCard.appendChild(header);
+    projCard.appendChild(copyBody);
+    return projCard
+
+
+}
+
+export { projGridCard, projMainCard }
