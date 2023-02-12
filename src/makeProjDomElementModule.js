@@ -1,5 +1,5 @@
 
-const makeProjDomElement = (project) => {
+const makeProjDomElement = (project, index) => {
     console.log("hello from makeProjDomElement: " + project.title );
 
     
@@ -15,7 +15,8 @@ const makeProjDomElement = (project) => {
 
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "delete";
-    deleteBtn.classList.add("delete-btn")
+    deleteBtn.classList.add("delete-btn");
+    deleteBtn.id = "delete-btn-" + index;
 
     proj.appendChild(projTitle);
     proj.appendChild(deleteBtn);

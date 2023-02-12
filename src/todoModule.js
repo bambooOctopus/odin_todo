@@ -4,6 +4,7 @@ import { formEventListener } from './formEventListenerModule.js';
 import { projectFactory } from './projectFactoryModule.js';
 import { projectWallet } from './projectWalletModule.js';
 import { displayProjects, homeScreen } from './domModule.js';
+import { projDivListener } from './projDivListener';
 
 const todoLoop = () => {
     const todoWallet = projectWallet();
@@ -14,8 +15,15 @@ const todoLoop = () => {
         displayProjects(todoWallet);        
         formEventListener(todoWallet);             
         displayProjects(todoWallet);
+        deleteProject();
         
 
+    }
+
+    const deleteProject = () => {
+        console.log("delete project");
+        projDivListener(todoWallet);
+        
     }
 
 

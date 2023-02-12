@@ -29,7 +29,7 @@ const displayProjects = (wallet) => {
     if (wallet.length > 0) {
         clearProjDiv();
        
-        wallet.forEach(project => makeProjDomElement(project));
+        wallet.forEach((project, index) => makeProjDomElement(project, index));
     }
 };
 

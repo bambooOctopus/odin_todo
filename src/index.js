@@ -3,7 +3,8 @@ import { projectForm } from './projectFormModule.js';
 import { formEventListener } from './formEventListenerModule.js';
 import { projectFactory } from './projectFactoryModule.js';
 import { projectWallet } from './projectWalletModule.js';
-import { todoLoop } from './todoModule'
+import { todoLoop } from './todoModule.js';
+
 
 //const wallet = projectWallet();
 //console.log(proj);
@@ -19,8 +20,8 @@ import { todoLoop } from './todoModule'
 //console.log(wallet);
 //p.createProject("bill");
 
-let todo = todoLoop();
-todo.home();
+let todo = todoLoop().home();
+
 
 
 
