@@ -1,17 +1,40 @@
+import { projectForm } from "./formsModule";
+
 const header = () => {
-    return "header"
+    const headerDiv = document.createElement("div");
+    headerDiv.classList.add("header-div");
+    const h = document.createElement("h1");
+    h.textContent = "header";
+    headerDiv.appendChild(h);
+
+    return headerDiv
 };
 
 const sideBar = () => {
-    return "sideBar";
+    const sideBarDiv = document.createElement("div");
+    sideBarDiv.classList.add("side-bar-div");
+    const h = document.createElement("h1");
+    h.textContent = "sideBar";
+    sideBarDiv.appendChild(h);
+
+    return sideBarDiv;
+    
 };
 
 const body = () => {
-    return "contentBody";
+    const bodyDiv = document.createElement("div");
+    bodyDiv.classList.add("body-div");
+    
+    
+
+    const projForm = projectForm();
+    bodyDiv.appendChild(projForm);
+
+    return bodyDiv;
 
 };
 
-const homeScreen = () => {
+const layOut = () => {
     const contentDiv = document.getElementById("content");
 
     const contentHeader = document.createElement("p");
@@ -26,10 +49,28 @@ const homeScreen = () => {
     contentBody.textContent = body();
     contentBody.classList.add("big-letters");
 
-    contentDiv.appendChild(contentHeader);
-    contentDiv.appendChild(contentSideBar);
-    contentDiv.appendChild(contentBody);
+     contentDiv.appendChild(header());
+     contentDiv.appendChild(sideBar());
+     contentDiv.appendChild(body());
+
 
 };
 
-export { homeScreen }
+const homeScreen = () => {
+    layOut();
+    // 1. layout
+    // 2. project form
+    // 3. current projects
+    
+};
+
+const projScreen = () => {
+    layOut();
+    // 1. layout
+    // 2. project info 
+    // 3. item form 
+    // 4. current items
+
+};
+
+export { homeScreen, projScreen }

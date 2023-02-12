@@ -1,6 +1,6 @@
 import { wallet } from "./walletModule.js";
 import { projectForm } from "./formsModule.js";
-import { homeScreen } from "./domUpdateModule.js";
+import { homeScreen, projScreen } from "./domUpdateModule.js";
 
 const todo = () => {
     const projectWallet = wallet();
@@ -20,6 +20,7 @@ const todo = () => {
     const proj = () => {
         //project page displaying all it's items
         console.log("#proj");
+        projScreen();
     };
 
     return {home, proj, projectWallet }

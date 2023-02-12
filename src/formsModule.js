@@ -1,5 +1,5 @@
 const projectForm = () => {
-    const contentDiv = document.getElementById("content");
+    
 
     const formDiv = document.createElement("div");
 
@@ -8,9 +8,10 @@ const projectForm = () => {
     const label = document.createElement("label");    
     label.textContent = "project: ";
 
-    const textInput = document.createElement("input");
+    const textInput = document.createElement("input");    
     textInput.placeholder = "project name"
     textInput.classList.add("text-input");
+    
 
     const submitBtn = document.createElement("input");
     submitBtn.type = "submit";
@@ -21,7 +22,9 @@ const projectForm = () => {
     form.appendChild(textInput);
     form.appendChild(submitBtn);
     formDiv.appendChild(form);
-    contentDiv.appendChild(formDiv);
+    
+    return formDiv;
+    
 };
 
 export { projectForm }
