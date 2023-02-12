@@ -1,9 +1,6 @@
 import { todo } from './todoModule.js'
-
-const content = document.getElementById("content");
-const helloWorld = document.createElement("h1");
-helloWorld.textContent = "hello world from the refresh branch";
-content.appendChild(helloWorld);
+import './style.css'
 
 const main = todo();
-main.projectsScreen();
+main.home();
+main.proj();

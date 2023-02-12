@@ -1,26 +1,28 @@
 import { wallet } from "./walletModule.js";
-import { project } from "./projectModule.js";
+import { projectForm } from "./formsModule.js";
+import { homeScreen } from "./domUpdateModule.js";
 
 const todo = () => {
     const projectWallet = wallet();
     
     
 
-    const projectsScreen = () => {
-        //this will be the landing/#projects screen;
-        //project form and all current projects
-        console.log("#projects");
+    const home = () => {        
+        console.log("#home");
+        homeScreen();       
 
-        //so this would run whatever needed to set up the projects screen
-        //so render the form, render all the current projects
+        //this will run homeScreen(); which will be in domUpdateModule
+        // homeScreen() will build out an entire view/screen 
+        // with a main div that has 2 child elements.
+        // a project form div at the top and a projGridDiv at the bottom.
     };
 
-    const projectScreen = () => {
+    const proj = () => {
         //project page displaying all it's items
-        console.log("#project");
+        console.log("#proj");
     };
 
-    return {projectsScreen, projectScreen, projectWallet }
+    return {home, proj, projectWallet }
 };
 
 export { todo }
