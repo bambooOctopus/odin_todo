@@ -11,7 +11,7 @@ const todo = () => {
     const home = () => {        
         console.log("#home");
         homeScreen();  
-        listen();     
+        listen(projectWallet);     
 
         //this will run homeScreen(); which will be in domUpdateModule
         // homeScreen() will build out an entire view/screen 

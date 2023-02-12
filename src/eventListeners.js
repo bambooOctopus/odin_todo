@@ -1,9 +1,18 @@
-const projectFormListener = () => {
+import { wallet } from "./walletModule";
+import { project } from "./projectModule";
+
+const projectFormListener = (wallet) => {
     const projectForm = document.getElementById("project-form");
+    
 
     projectForm.addEventListener("submit", (event) => {
         event.preventDefault();
         console.log(event.target[0].value);
+        // 1. use above console log value as title for project
+        const newProj = project(event.target[0].value);
+        // 2. add the project to the wallet
+        wallet.addProject(newProj);
+        console.log(wallet);
         event.target[0].value = "";
         event.target[0].focus();
     });
@@ -11,9 +20,9 @@ const projectFormListener = () => {
 
 
 //fired off in todoModule
-const listen = () => {
-    // fire off all the event listeners
-    projectFormListener();
+const listen = (wallet) => {
+    // fire off all the event listeners    
+    projectFormListener(wallet);
 };
 
 export { listen }
