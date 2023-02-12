@@ -1,3 +1,4 @@
+//fired off in domUpdateModule
 const projectForm = () => {
     
 
@@ -6,6 +7,7 @@ const projectForm = () => {
 
     const form = document.createElement("form");
     form.id = "project-form";
+    
 
     const label = document.createElement("label");    
     label.textContent = "project: ";
@@ -23,8 +25,10 @@ const projectForm = () => {
     submitBtn.classList.add("submit-btn");
     submitBtn.value = "create project";
 
+
+
     form.appendChild(label);
-    form.appendChild(textInput);
+    form.appendChild(textInput);    
     form.appendChild(submitBtn);
     formDiv.appendChild(form);
     
