@@ -21,11 +21,23 @@ const projectFormListener = (wallet) => {
     });
 };
 
+const projGridListener = (wallet) => {
+    const projGrid = document.getElementById("proj-grid-div");
+    projGrid.addEventListener("click", (event) => {
+       
+
+        if (event.target.nodeName == "BUTTON") {
+            console.log("this is a button: " + event.target.id);   
+        }
+    });
+};
+
 
 //fired off in todoModule
 const listen = (wallet) => {
     // fire off all the event listeners    
     projectFormListener(wallet);
+    projGridListener(wallet);
     
 };
 
