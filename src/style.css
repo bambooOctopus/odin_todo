@@ -5,17 +5,60 @@
 
 #content {
     width: 100%;
-    height: 100%;
+    height: 100vh;
 
     display: grid;
     grid-template-rows: 15vh 85vh;
     grid-template-columns: 17% 83%;
+    overflow: hidden;
 }
 
-.form-div {    
-    border: solid 1px red;
-    padding: 2rem;
-    width: 30rem;
+.big-letters {
+    font-size: 32px;
+}
+
+.header-div {
+    padding: 2rem 1rem;    
+    background-color: gray;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.side-bar-div {
+    padding: 1rem;
+    background-color: lightgreen;
+
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;    
+
+}
+
+.body-div {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;   
+
+    padding: 1rem;
+    background-color: orange;
+}
+
+/* project index view */
+.proj-grid-div {   
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    grid-template-rows: repeat(12, 200px);
+    overflow: scroll;    
+}
+
+
+.proj-form {
+    margin-left: 20rem;
+    margin-top: 2rem;
 }
 
 .text-input {
@@ -62,68 +105,18 @@
     width:4rem;
     cursor: pointer;
 
-
-    transition: 0.2s ease-in;   
-    
+    transition: 0.2s ease-in;
 }
 
 .delete-btn:hover {
     transform: scale(1.1);
 }
 
-.big-letters {
-    font-size: 32px;
-}
-
-.header-div {
-    padding: 2rem 1rem;    
-    background-color: gray;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 1;
-    grid-column-end: 3;
-}
-
-.side-bar-div {
-    padding: 1rem;
-    background-color: lightgreen;
-
-    grid-row-start: 2;
-    grid-row-end: 3;
-    grid-column-start: 1;
-    grid-column-end: 2;
-
-    
-
-}
-
-.proj-grid-div {
-    padding: 1rem;
-    background-color: orange;
-
-    grid-row-start: 2;
-    grid-row-end: 3;
-    grid-column-start: 2;
-    grid-column-end: 3;
-
-}
-
-.proj-form {
-    margin-left: 20rem;
-    margin-top: 2rem;
-}
-
-.proj-grid-div {
-    display: grid;
-    grid-template-columns: repeat(4, 200px);
-    grid-template-rows: repeat(12, 200px);
-    overflow: scroll;
-    
-}
-
+/* start project view */
 .proj-main-div {
     height: 600px;
     width: 600px;
     border: solid 1px black;
     border-radius: 6px;
 }
+

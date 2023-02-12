@@ -18,6 +18,7 @@ const projectFormListener = (wallet) => {
         console.log(wallet);
         event.target[0].value = "";
         event.target[0].focus();
+        event.stopPropagation();
         
     });
 };
@@ -34,6 +35,9 @@ const projGridListener = (wallet) => {
             // 1. remove this element from the wallet
             const projId = event.target.id.split("-")[2];            
             wallet.removeProject(projId)            
+        }
+        else {
+            return;
         };
     });
 };
@@ -51,6 +55,7 @@ const projCardListener = (wallet) => {
         const project = wallet.getProject(projId);
 
         if (project === undefined) {
+            event.stopPropagation();
             return;
         }
         else {

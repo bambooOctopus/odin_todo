@@ -22,19 +22,26 @@ const sideBar = () => {
     
 };
 
+const projGridDiv = () => {
+    const gridDiv = document.createElement("div");
+    gridDiv.classList.add("proj-grid-div");
+    gridDiv.id = "proj-grid-div"
+
+    return gridDiv;
+
+}
+
 const body = () => {
     const bodyDiv = document.createElement("div");
-    bodyDiv.classList.add("proj-grid-div");
-    bodyDiv.id = "proj-grid-div"
-    
-    
-
-   
-   
+    bodyDiv.classList.add("body-div");
+    bodyDiv.id = "body-div"  
+    bodyDiv.appendChild(projGridDiv());
 
     return bodyDiv;
 
 };
+
+
 
 const layOut = () => {
     const contentDiv = document.getElementById("content");
