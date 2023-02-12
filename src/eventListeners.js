@@ -27,7 +27,11 @@ const projGridListener = (wallet) => {
        
 
         if (event.target.nodeName == "BUTTON") {
-            console.log("this is a button: " + event.target.id);   
+            console.log("this is a button: " + event.target.id); 
+            // 1. remove this element from the wallet
+            const projId = event.target.id.split("-")[2];            
+            wallet.removeProject(projId)
+            // 2. refresh the proj-grid-div  
         }
     });
 };

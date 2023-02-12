@@ -8,7 +8,14 @@ const wallet = () => {
         projGridRefresh(walletArray);
     };
 
-    return { walletArray, addProject }
+    const removeProject = (projId) => {
+        console.log(projId);
+        walletArray.splice(projId, 1);
+        projGridRefresh(walletArray);
+
+    };
+
+    return { walletArray, addProject, removeProject }
 };
 
 export { wallet }
