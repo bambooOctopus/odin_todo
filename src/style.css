@@ -113,6 +113,12 @@
 }
 
 /* start project view */
+.main-div {
+    height: 100%;
+    width: 100%;
+    background-color: blue;
+}
+
 .proj-main-div {
     height: 600px;
     width: 600px;

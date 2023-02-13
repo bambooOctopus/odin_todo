@@ -31,6 +31,15 @@ const projGridDiv = () => {
 
 }
 
+const projMainDiv = () => {
+    const mainDiv = document.createElement("div");
+    mainDiv.classList.add("main-div");
+    mainDiv.id = "main-div"
+
+    return mainDiv;
+
+};
+
 const body = () => {
     const bodyDiv = document.createElement("div");
     bodyDiv.classList.add("body-div");
@@ -39,6 +48,13 @@ const body = () => {
 
     return bodyDiv;
 
+};
+
+const appendBody = (element) => {
+    const bodyDiv = document.getElementById("body-div");
+    console.log(bodyDiv);
+    bodyDiv.innerHTML = "";
+    bodyDiv.appendChild(element);
 };
 
 
@@ -74,6 +90,7 @@ const projGridRefresh = (wallet) => {
 
 const homeScreen = () => {
     layOut();
+    appendBody(projGridDiv());
     // 1. layout
     // 2. project form
     // 3. current projects
@@ -86,13 +103,14 @@ const projScreen = (proj) => {
     console.log("-----------------------------------------------");
     //layOut();
 
-    const projGridDiv = document.getElementById("proj-grid-div");
-    projGridDiv.innerHTML = "";
+    const bodyDiv = document.getElementById("body-div");
+    bodyDiv.innerHTML = "";
+    appendBody(projMainDiv());
 
     // make/return projMainCard, append it to projGridDiv
     const projCard = projMainCard(proj);
 
-    projGridDiv.appendChild(projCard);
+    
 
 
     console.log("post layout()");
