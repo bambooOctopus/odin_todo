@@ -4,12 +4,7 @@ import { projGridCard, projMainCard } from "./projCardModule";
 
 const header = () => {
     const headerDiv = document.createElement("div");
-    headerDiv.classList.add("header-div");
-    
-
-    const projForm = projectForm();
-    projForm.classList.add("proj-form");
-    headerDiv.appendChild(projForm)
+    headerDiv.classList.add("header-div");  
 
     return headerDiv
 };
@@ -27,6 +22,12 @@ const projGridDiv = () => {
     gridDiv.classList.add("proj-grid-div");
     gridDiv.id = "proj-grid-div"
 
+    const bodyHeader = document.getElementById("body-header-div");
+    console.log(bodyHeader);
+    
+    //bodyHeader.appendChild(projForm)
+
+    
     return gridDiv;
 
 }
@@ -40,10 +41,22 @@ const projMainDiv = () => {
 
 };
 
+const bodyHeader = () => {
+    const bodyHeader = document.createElement("div");
+    bodyHeader.classList.add("body-header-div");
+    bodyHeader.id = "body-header-div";    
+    
+    return bodyHeader
+}
+
 const body = () => {
     const bodyDiv = document.createElement("div");
     bodyDiv.classList.add("body-div");
-    bodyDiv.id = "body-div"  
+    bodyDiv.id = "body-div";
+    
+    bodyDiv.appendChild(bodyHeader());
+    
+    
     bodyDiv.appendChild(projGridDiv());
 
     return bodyDiv;
@@ -54,8 +67,15 @@ const appendBody = (element) => {
     const bodyDiv = document.getElementById("body-div");
     console.log(bodyDiv);
     bodyDiv.innerHTML = "";
+    bodyDiv.appendChild(bodyHeader());
     bodyDiv.appendChild(element);
 };
+
+const appendBodyHeader = (element) => {
+    const bodyHeader = document.getElementById("body-header-div");
+    bodyHeader.innerText = ""
+    bodyHeader.appendChild(element);    
+}
 
 
 
@@ -96,6 +116,7 @@ const appendMainDiv = (element) => {
 const homeScreen = () => {
     layOut();
     appendBody(projGridDiv());
+    appendBodyHeader(projectForm());
     // 1. layout
     // 2. project form
     // 3. current projects

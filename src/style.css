@@ -37,6 +37,15 @@
 
 }
 
+.body-header-div {
+    height: 10%;
+    width: 70%;
+    border: solid 2px black;
+    display: flex;
+    align-items: center;
+    padding: 0rem 1rem; 
+}
+
 .body-div {
     grid-row-start: 2;
     grid-row-end: 3;
@@ -54,12 +63,6 @@
     grid-template-columns: repeat(4, 200px);
     grid-template-rows: repeat(12, 200px);
     overflow: scroll;    
-}
-
-
-.proj-form {
-    margin-left: 20rem;
-    margin-top: 2rem;
 }
 
 .text-input {
