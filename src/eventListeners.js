@@ -57,22 +57,22 @@ const projGridListener = (wallet) => {
     });
 };
 
-const homeBtnListener = () => {
-    const homeBtn = document.getElementById("home-btn");
-    homeBtn.addEventListener("click", (event) => {
-        console.log(event)
-        homeScreen();
+const sideBarListener = (wallet) => {
+    const sideBar = document.getElementById("side-bar-div");
+    sideBar.addEventListener("click", (event) => {
+        if (event.target.nodeName == "BUTTON") {
+            homeScreen(wallet);
+            listen(wallet);
+        }
     });
-}
-
-
-
+};
 
 //fired off in todoModule
 const listen = (wallet) => {
     // fire off all the event listeners    
     projectFormListener(wallet);
     projGridListener(wallet);
+    sideBarListener(wallet);
 
     // 1. add sideBarListener(wallet);
     // 2. in sideBarListener if the target is a button, and that buttons id is home;
@@ -82,4 +82,4 @@ const listen = (wallet) => {
     
 };
 
-export { listen, homeBtnListener }
+export { listen }

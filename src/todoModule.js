@@ -10,7 +10,7 @@ const todo = () => {
 
     const home = () => {        
         console.log("#home");
-        homeScreen();  
+        homeScreen(projectWallet);  
         listen(projectWallet);     
 
         //this will run homeScreen(); which will be in domUpdateModule

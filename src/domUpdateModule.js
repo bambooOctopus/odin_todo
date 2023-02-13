@@ -1,6 +1,6 @@
 import { projectForm } from "./formsModule";
 import { projGridCard, projMainCard } from "./projCardModule";
-import { homeBtnListener } from "./eventListeners";
+import { homeBtnListener, listen } from "./eventListeners";
 
 
 const header = () => {
@@ -103,12 +103,21 @@ const projGridRefresh = (wallet) => {
     projDiv.innerHTML = "";
     console.log(projDiv);
 
-    wallet.forEach((p, index) => {
-        // 1. make a project card
-        let card = projGridCard(p, index);
-        // 2. append card to projDiv
-        projDiv.appendChild(card);
-    });
+    if (wallet.length > 0) {
+
+        wallet.forEach((p, index) => {
+            // 1. make a project card
+            let card = projGridCard(p, index);
+            // 2. append card to projDiv
+            projDiv.appendChild(card);
+        });
+
+        
+
+    } 
+    else {
+        return
+    };
 
 };
 
@@ -117,12 +126,21 @@ const appendMainDiv = (element) => {
     mainDiv.appendChild(element);
 };
 
-const homeScreen = () => {
+const homeScreen = (wallet) => {
     const contentDiv = document.getElementById("content");
     contentDiv.innerHTML = "";
     layOut();
     appendBody(projGridDiv());
     appendBodyHeader(projectForm());
+    console.log("-------------------------------------------");
+    console.log("-------------------------------------------");
+    console.log("      homeScreen() wallet   ---------------");
+    console.log(wallet)
+    console.log("-------------------------------------------");
+    console.log("-------------------------------------------");
+    projGridRefresh(wallet.walletArray);
+    //listen(wallet);
+    
     // 1. layout
     // 2. project form
     // 3. current projects
@@ -143,7 +161,7 @@ const projScreen = (proj) => {
     homeBtn.classList.add("home-btn");
     homeBtn.id = "home-btn";
     sideBar.appendChild(homeBtn);
-    homeBtnListener();
+    
     
     appendBody(projMainDiv());
     
