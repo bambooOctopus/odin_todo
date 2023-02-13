@@ -1,5 +1,6 @@
 import { projectForm } from "./formsModule";
 import { projGridCard, projMainCard } from "./projCardModule";
+import { homeBtnListener } from "./eventListeners";
 
 
 const header = () => {
@@ -11,7 +12,8 @@ const header = () => {
 
 const sideBar = () => {
     const sideBarDiv = document.createElement("div");
-    sideBarDiv.classList.add("side-bar-div");   
+    sideBarDiv.classList.add("side-bar-div");
+    sideBarDiv.id = "side-bar-div";   
 
     return sideBarDiv;
     
@@ -21,6 +23,8 @@ const projGridDiv = () => {
     const gridDiv = document.createElement("div");
     gridDiv.classList.add("proj-grid-div");
     gridDiv.id = "proj-grid-div"
+
+    // this needs to update the grid div with the wallet;
 
     const bodyHeader = document.getElementById("body-header-div");
     console.log(bodyHeader);
@@ -114,6 +118,8 @@ const appendMainDiv = (element) => {
 };
 
 const homeScreen = () => {
+    const contentDiv = document.getElementById("content");
+    contentDiv.innerHTML = "";
     layOut();
     appendBody(projGridDiv());
     appendBodyHeader(projectForm());
@@ -130,6 +136,14 @@ const projScreen = (proj) => {
     //layOut();
 
     const bodyDiv = document.getElementById("body-div");
+    const sideBar = document.getElementById("side-bar-div");
+
+    const homeBtn = document.createElement("button");
+    homeBtn.textContent = "home";
+    homeBtn.classList.add("home-btn");
+    homeBtn.id = "home-btn";
+    sideBar.appendChild(homeBtn);
+    homeBtnListener();
     
     appendBody(projMainDiv());
     

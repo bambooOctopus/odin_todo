@@ -1,6 +1,5 @@
 import { project } from "./projectModule";
-import { projGridRefresh, projScreen } from "./domUpdateModule";
-
+import { projScreen, homeScreen } from "./domUpdateModule";
 
 const projectFormListener = (wallet) => {
     const projectForm = document.getElementById("project-form");
@@ -58,6 +57,14 @@ const projGridListener = (wallet) => {
     });
 };
 
+const homeBtnListener = () => {
+    const homeBtn = document.getElementById("home-btn");
+    homeBtn.addEventListener("click", (event) => {
+        console.log(event)
+        homeScreen();
+    });
+}
+
 
 
 
@@ -66,7 +73,13 @@ const listen = (wallet) => {
     // fire off all the event listeners    
     projectFormListener(wallet);
     projGridListener(wallet);
+
+    // 1. add sideBarListener(wallet);
+    // 2. in sideBarListener if the target is a button, and that buttons id is home;
+    // 3. run homeScreen();
+    // 4. run projGridRefresh();  
+    
     
 };
 
-export { listen }
+export { listen, homeBtnListener }

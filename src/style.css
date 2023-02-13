@@ -133,3 +133,16 @@
     border-radius: 6px;
 }
 
+.home-btn {
+    padding: .2rem .3rem;
+    background-color: white;
+    color: black;
+    border: none;
+
+    transition: 0.2s ease-in;
+}
+
+.home-btn:hover {
+    transform: scale(1.1);
+}
+
