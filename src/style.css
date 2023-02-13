@@ -112,7 +112,8 @@
 }
 
 .proj-card:hover {
-    transform: scale(1.1);
+    border: solid 1px black;
+    border-radius: 6px;
 }
 
 .delete-btn {
