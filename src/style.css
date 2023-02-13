@@ -48,7 +48,8 @@
 }
 
 /* project index view */
-.proj-grid-div {   
+.proj-grid-div {  
+    width: 70%;    
     display: grid;
     grid-template-columns: repeat(4, 200px);
     grid-template-rows: repeat(12, 200px);
@@ -115,7 +116,7 @@
 /* start project view */
 .main-div {
     height: 100%;
-    width: 100%;
+    width: 70%;
     background-color: blue;
 }
 

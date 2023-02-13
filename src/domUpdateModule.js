@@ -88,6 +88,11 @@ const projGridRefresh = (wallet) => {
 
 };
 
+const appendMainDiv = (element) => {
+    const mainDiv = document.getElementById("main-div");
+    mainDiv.appendChild(element);
+};
+
 const homeScreen = () => {
     layOut();
     appendBody(projGridDiv());
@@ -109,6 +114,10 @@ const projScreen = (proj) => {
 
     // make/return projMainCard, append it to projGridDiv
     const projCard = projMainCard(proj);
+
+    const mainDiv = document.getElementById("main-div");
+    // should make an append main-div function();
+    appendMainDiv(projCard);
 
     
 
