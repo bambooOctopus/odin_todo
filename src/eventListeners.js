@@ -37,6 +37,9 @@ const projectFormListener = (wallet) => {
 const projGridListener = (wallet) => {
     const projGrid = document.getElementById("proj-grid-div");
     projGrid.addEventListener("click", (event) => {
+        const splitId = event.target.id.split("-")
+        const projCardId = splitId[0] + splitId[1];
+        console.log(projCardId)
        
 
         if (event.target.nodeName == "BUTTON") {
@@ -46,42 +49,16 @@ const projGridListener = (wallet) => {
             const projId = event.target.id.split("-")[2];            
             wallet.removeProject(projId)            
         }
-        else {
+        else if (projCardId === "projcard") {            
+            const projId = event.target.id.split("-")[2];
+            const project = wallet.getProject(projId);
+            projScreen(project);
             
-            return;
         };
     });
 };
 
-// this whole shit is you click on proj card you go to proj view page;
-// good luck with tath shit you peasant
-const projCardListener = (wallet) => {
-    const projGrid = document.getElementById("proj-grid-div");
 
-    projGrid.addEventListener("click", (event) => { 
-        console.log("this is the event-------------------------------------")       
-        console.log(event)
-        console.log("this is the event-------------------------------------")       
-        const projId = event.target.id.split("-")[2];
-        const project = wallet.getProject(projId);
-
-        if (project === undefined) {
-            
-            
-        }
-        else {
-            
-            projScreen(project);            
-        }
-        
-        
-        
-        
-
-        // this dumb shit should be you click on the project card you go to the project page
-        //  come on now munky tits
-    });
-};
 
 
 //fired off in todoModule
@@ -89,7 +66,7 @@ const listen = (wallet) => {
     // fire off all the event listeners    
     projectFormListener(wallet);
     projGridListener(wallet);
-    projCardListener(wallet);
+    
 };
 
 export { listen }
