@@ -18,10 +18,19 @@ const projectFormListener = (wallet) => {
         console.log(wallet);
         event.target[0].value = "";
         event.target[0].focus();
-        event.stopPropagation();
+        
         
     });
 };
+
+
+/// OK
+// the following two event listeners need to be combined in to one
+// there shouldn't be two listeners on the same div
+// just one that listens for delete buttons and one that listens
+// for if it's a card or not
+// then it does what it needs to do 
+
 
 // 1. rename to mean only delete button listener
 // 2. make proj-card listener
@@ -32,11 +41,13 @@ const projGridListener = (wallet) => {
 
         if (event.target.nodeName == "BUTTON") {
             console.log("this is a button: " + event.target.id); 
+            
             // 1. remove this element from the wallet
             const projId = event.target.id.split("-")[2];            
             wallet.removeProject(projId)            
         }
         else {
+            
             return;
         };
     });
@@ -55,10 +66,11 @@ const projCardListener = (wallet) => {
         const project = wallet.getProject(projId);
 
         if (project === undefined) {
-            event.stopPropagation();
-            return;
+            
+            
         }
         else {
+            
             projScreen(project);            
         }
         

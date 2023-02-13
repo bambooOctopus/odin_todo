@@ -130,8 +130,9 @@ const projScreen = (proj) => {
     //layOut();
 
     const bodyDiv = document.getElementById("body-div");
-    bodyDiv.innerHTML = "";
+    
     appendBody(projMainDiv());
+    
 
     // make/return projMainCard, append it to projGridDiv
     const projCard = projMainCard(proj);
