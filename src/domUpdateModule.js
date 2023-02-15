@@ -1,4 +1,4 @@
-import { projectForm } from "./formsModule";
+import { projectForm, itemForm } from "./formsModule";
 import { projGridCard, projMainCard } from "./projCardModule";
 import { homeBtnListener, listen } from "./eventListeners";
 
@@ -6,6 +6,7 @@ import { homeBtnListener, listen } from "./eventListeners";
 const header = () => {
     const headerDiv = document.createElement("div");
     headerDiv.classList.add("header-div");  
+    
 
     return headerDiv
 };
@@ -155,6 +156,7 @@ const projScreen = (proj) => {
 
     const bodyDiv = document.getElementById("body-div");
     const sideBar = document.getElementById("side-bar-div");
+    
 
     const homeBtn = document.createElement("button");
     homeBtn.textContent = "home";
@@ -164,6 +166,8 @@ const projScreen = (proj) => {
     
     
     appendBody(projMainDiv());
+
+    
     
 
     // make/return projMainCard, append it to projGridDiv

@@ -36,4 +36,42 @@ const projectForm = () => {
     
 };
 
-export { projectForm }
+const itemForm = () => {
+    
+
+    const formDiv = document.createElement("div");
+    formDiv.id = "item-form-div";
+
+    const form = document.createElement("form");
+    form.id = "item-form";
+    
+
+    const label = document.createElement("label");    
+    label.textContent = "item:";
+    label.style.marginRight = "1.9rem";
+    
+
+    const textInput = document.createElement("input");    
+    textInput.placeholder = "item name   "
+    textInput.classList.add("text-input");
+    textInput.name = "item-name";
+    textInput.id = "item-name";
+    
+
+    const submitBtn = document.createElement("input");
+    submitBtn.type = "submit";
+    submitBtn.classList.add("submit-btn");
+    submitBtn.value = "create item";
+
+
+
+    form.appendChild(label);
+    form.appendChild(textInput);    
+    form.appendChild(submitBtn);
+    formDiv.appendChild(form);
+    
+    return formDiv;
+    
+};
+
+export { projectForm, itemForm }
