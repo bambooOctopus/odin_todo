@@ -13,7 +13,8 @@ const projectForm = () => {
     label.textContent = "project: ";
     
 
-    const textInput = document.createElement("input");    
+    const textInput = document.createElement("input");
+    textInput.required = true;    
     textInput.placeholder = "project name"
     textInput.classList.add("text-input");
     textInput.name = "project-name";
@@ -56,6 +57,7 @@ const itemForm = () => {
     textInput.classList.add("text-input");
     textInput.name = "item-name";
     textInput.id = "item-name";
+    textInput.required = true;
     
 
     const submitBtn = document.createElement("input");
