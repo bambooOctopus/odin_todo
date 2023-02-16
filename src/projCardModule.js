@@ -1,6 +1,6 @@
 // this is for proj-grid-div view
 
-import { itemForm } from "./formsModule";
+
 
 // fired off in eventListeners
 const projGridCard = (proj, index) => {
@@ -30,8 +30,8 @@ const projMainCard = (proj, index) => {
     console.log(proj)
     console.log("hello from projCard");
 
-    const bodyHeader = document.getElementById("body-header-div");
-    bodyHeader.appendChild(itemForm());
+    
+    
 
     const projCard = document.createElement("div");
     projCard.classList.add("proj-main-div");

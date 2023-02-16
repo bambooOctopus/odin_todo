@@ -28,7 +28,7 @@ const projGridDiv = () => {
     // this needs to update the grid div with the wallet;
 
     const bodyHeader = document.getElementById("body-header-div");
-    console.log(bodyHeader);
+    
     
     //bodyHeader.appendChild(projForm)
 
@@ -70,7 +70,7 @@ const body = () => {
 
 const appendBody = (element) => {
     const bodyDiv = document.getElementById("body-div");
-    console.log(bodyDiv);
+    
     bodyDiv.innerHTML = "";
     bodyDiv.appendChild(bodyHeader());
     bodyDiv.appendChild(element);
@@ -95,14 +95,14 @@ const layOut = () => {
 };
 
 const projGridRefresh = (wallet) => {
-    console.log("projGridRefresh");
+   
     // 1. take the projGridDiv and remove all its children
     // 2. then go through the wallet array and populate the grid
 
     const projDiv = document.getElementById("proj-grid-div");
-    console.log(projDiv);
+   
     projDiv.innerHTML = "";
-    console.log(projDiv);
+   
 
     if (wallet.length > 0) {
 
@@ -133,12 +133,7 @@ const homeScreen = (wallet) => {
     layOut();
     appendBody(projGridDiv());
     appendBodyHeader(projectForm());
-    console.log("-------------------------------------------");
-    console.log("-------------------------------------------");
-    console.log("      homeScreen() wallet   ---------------");
-    console.log(wallet)
-    console.log("-------------------------------------------");
-    console.log("-------------------------------------------");
+   
     projGridRefresh(wallet.walletArray);
     //listen(wallet);
     
@@ -149,10 +144,8 @@ const homeScreen = (wallet) => {
 };
 
 const projScreen = (proj) => {
-    console.log("proj from projScreen up next-----------------");
-    console.log(proj);
-    console.log("-----------------------------------------------");
-    //layOut();
+   
+   
 
     const bodyDiv = document.getElementById("body-div");
     const sideBar = document.getElementById("side-bar-div");
@@ -166,6 +159,7 @@ const projScreen = (proj) => {
     
     
     appendBody(projMainDiv());
+    appendBodyHeader(itemForm());
 
     
     
@@ -180,7 +174,7 @@ const projScreen = (proj) => {
     
 
 
-    console.log("post layout()");
+    
     
     // 1. layout
     // 2. project info 
