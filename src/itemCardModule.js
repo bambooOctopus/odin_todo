@@ -4,6 +4,7 @@ const itemCard = (item, index) => {
     console.log("-------------------------------------------");
     const card = document.createElement("div");
     card.classList.add("item-card");
+    card.id = "item-card-" + index;
 
     const itemTitle = document.createElement("p");
     itemTitle.textContent = item.title;
@@ -14,6 +15,7 @@ const itemCard = (item, index) => {
     toggleBtn.classList.add("submit-btn");
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "delete";
+    deleteBtn.id = "delete-btn-" + index;
     deleteBtn.style.marginLeft = "1rem";
     deleteBtn.classList.add("delete-btn");
     buttonDiv.appendChild(toggleBtn);

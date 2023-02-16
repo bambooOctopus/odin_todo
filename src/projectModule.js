@@ -10,9 +10,17 @@ const project = (projectTitle) => {
         projMainDivRefresh(itemArray);
     };
 
+    const removeItem = (itemId) => {
+        
+
+        itemArray.splice(itemId, 1);
+        projMainDivRefresh(itemArray);
+
+    };
+
     
 
-    return { title, itemArray, addItem }
+    return { title, itemArray, addItem, removeItem }
 
 };
 

@@ -1,4 +1,4 @@
-import { project, addItem } from "./projectModule";
+import { project, addItem, removeItem } from "./projectModule";
 
 import { projScreen, homeScreen } from "./domUpdateModule";
 
@@ -23,6 +23,7 @@ const projectFormListener = (wallet) => {
     });
 };
 
+// fired off in domUpdate#projScreen
 const itemFormListener = (proj) => {
     const itemForm = document.getElementById("item-form");
 
@@ -73,6 +74,25 @@ const projGridListener = (wallet) => {
     });
 };
 
+const itemDivListener = (proj) => {
+    const itemDiv = document.getElementById("item-div");
+    console.log("--------------------------------------");
+    console.log("ITEM DIV ");
+    console.log(itemDiv);
+    console.log("--------------------------------------");
+    itemDiv.addEventListener("click", (event) => {
+        
+
+        console.log(event.target);
+        const eventType = event.target.id.split("-");        
+        if (eventType[0] === "delete") {
+            proj.removeItem(eventType[2]);
+
+        }
+        
+    });
+};
+
 
 
 const sideBarListener = (wallet) => {
@@ -100,4 +120,4 @@ const listen = (wallet) => {
     
 };
 
-export { listen, itemFormListener }
+export { listen, itemFormListener, itemDivListener }

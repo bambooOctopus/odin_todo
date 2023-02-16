@@ -1,6 +1,6 @@
 import { projectForm, itemForm } from "./formsModule";
 import { projGridCard, projMainCard } from "./projCardModule";
-import { homeBtnListener, listen, itemFormListener } from "./eventListeners";
+import { homeBtnListener, listen, itemFormListener, itemDivListener } from "./eventListeners";
 import { itemCard } from "./itemCardModule";
 
 
@@ -126,7 +126,7 @@ const projGridRefresh = (wallet) => {
 // update proj-main-div or whatever it's called 
 const projMainDivRefresh = (itemArray) => {
     const itemDiv = document.getElementById("item-div");
-    itemDiv.innerHTML ="";
+    itemDiv.innerHTML = "";
 
     if (itemArray.length > 0) {
         // iterate over the array
@@ -181,7 +181,7 @@ const projScreen = (proj) => {
     
     appendBody(projMainDiv());
     appendBodyHeader(itemForm());
-    itemFormListener(proj);
+    
 
     
     
@@ -194,6 +194,9 @@ const projScreen = (proj) => {
     appendMainDiv(projCard);
 
     projMainDivRefresh(proj.itemArray)
+
+    itemFormListener(proj);
+    itemDivListener(proj);
 
     
 
