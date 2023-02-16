@@ -1,4 +1,5 @@
-import { project } from "./projectModule";
+import { project, addItem } from "./projectModule";
+
 import { projScreen, homeScreen } from "./domUpdateModule";
 
 const projectFormListener = (wallet) => {
@@ -28,6 +29,8 @@ const itemFormListener = (proj) => {
     itemForm.addEventListener("submit", (event) => {
         event.preventDefault();
         console.log(event.target[0].value);
+
+        proj.addItem(event.target[0].value)
 
         event.target[0].value = "";
         event.target[0].focus();
