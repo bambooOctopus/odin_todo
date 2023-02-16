@@ -1,3 +1,4 @@
+import { projMainDivRefresh } from "./domUpdateModule";
 import { createItem } from "./itemModule";
 
 const project = (projectTitle) => {
@@ -6,7 +7,7 @@ const project = (projectTitle) => {
 
     const addItem = (item) => {
         itemArray.push(createItem(item));
-        console.log(itemArray);
+        projMainDivRefresh(itemArray);
     };
 
     

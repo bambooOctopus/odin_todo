@@ -39,6 +39,7 @@ const projMainCard = (proj, index) => {
     // 1. make this a grid div
     const itemDiv = document.createElement("div");
     itemDiv.classList.add("item-div");
+    itemDiv.id = "item-div";
     
 
     // 2. append all the items in the itemArray to that grid div

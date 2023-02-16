@@ -1,6 +1,7 @@
 import { projectForm, itemForm } from "./formsModule";
 import { projGridCard, projMainCard } from "./projCardModule";
 import { homeBtnListener, listen, itemFormListener } from "./eventListeners";
+import { itemCard } from "./itemCardModule";
 
 
 const header = () => {
@@ -124,10 +125,21 @@ const projGridRefresh = (wallet) => {
 
 // update proj-main-div or whatever it's called 
 const projMainDivRefresh = (itemArray) => {
-    const projMainDiv = document.getElementById("proj-main-div");
+    const itemDiv = document.getElementById("item-div");
+    itemDiv.innerHTML ="";
 
+    if (itemArray.length > 0) {
+        // iterate over the array
+        itemArray.forEach((item, index) => {
+            let card = itemCard(item, index);
+            itemDiv.appendChild(card);
+
+        });
+    }
+    else {
+        return 
+    };
     
-    console.log(projMainDiv);
 
 };
 
@@ -195,4 +207,4 @@ const projScreen = (proj) => {
 
 };
 
-export { homeScreen, projScreen, projGridRefresh, projMainDiv }
+export { homeScreen, projScreen, projGridRefresh, projMainDiv, projMainDivRefresh }

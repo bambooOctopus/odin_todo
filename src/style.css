@@ -167,10 +167,21 @@
 }
 
 .item-div {
-    border: solid 1px pink;
+    
     width: 100%;
     height: 100%;
 
     display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.item-card {
+    border: solid 1px lightgreen;
+    padding: 1rem 5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
