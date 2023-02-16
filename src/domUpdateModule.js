@@ -122,6 +122,15 @@ const projGridRefresh = (wallet) => {
 
 };
 
+// update proj-main-div or whatever it's called 
+const projMainDivRefresh = (itemArray) => {
+    const projMainDiv = document.getElementById("proj-main-div");
+
+    
+    console.log(projMainDiv);
+
+};
+
 const appendMainDiv = (element) => {
     const mainDiv = document.getElementById("main-div");
     mainDiv.appendChild(element);
@@ -172,6 +181,8 @@ const projScreen = (proj) => {
     // should make an append main-div function();
     appendMainDiv(projCard);
 
+    projMainDivRefresh(proj.itemArray)
+
     
 
 
@@ -184,4 +195,4 @@ const projScreen = (proj) => {
 
 };
 
-export { homeScreen, projScreen, projGridRefresh }
+export { homeScreen, projScreen, projGridRefresh, projMainDiv }

@@ -30,15 +30,21 @@ const projMainCard = (proj, index) => {
     projCard.classList.add("proj-main-div");
     projCard.id = "proj-main-div";
 
-    const header = document.createElement("p");
-    header.classList.add("big-letters");
-    header.textContent = proj.title;
+    const header = document.createElement("div");
+    const headerTitle = document.createElement("p");    
+    headerTitle.textContent = proj.title;
+    headerTitle.classList.add("big-letters");
+    header.appendChild(headerTitle);
 
-    const copyBody = document.createElement("p");
-    copyBody.textContent = "boiler plate text I can't remember the boiler plate copy thing";
+    // 1. make this a grid div
+    const itemDiv = document.createElement("div");
+    itemDiv.classList.add("item-div");
+    
+
+    // 2. append all the items in the itemArray to that grid div
     
     projCard.appendChild(header);
-    projCard.appendChild(copyBody);
+    projCard.appendChild(itemDiv);
     return projCard
 
 
