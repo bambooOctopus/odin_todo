@@ -24,14 +24,7 @@ const projGridCard = (proj, index) => {
 
 //this will be for proj view
 // fired off in eventListeners
-const projMainCard = (proj, index) => {
-
-    console.log("project from projMainCard: " + proj + " is next")
-    console.log(proj)
-    console.log("hello from projCard");
-
-    
-    
+const projMainCard = (proj, index) => {    
 
     const projCard = document.createElement("div");
     projCard.classList.add("proj-main-div");

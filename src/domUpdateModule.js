@@ -1,6 +1,6 @@
 import { projectForm, itemForm } from "./formsModule";
 import { projGridCard, projMainCard } from "./projCardModule";
-import { homeBtnListener, listen } from "./eventListeners";
+import { homeBtnListener, listen, itemFormListener } from "./eventListeners";
 
 
 const header = () => {
@@ -135,7 +135,7 @@ const homeScreen = (wallet) => {
     appendBodyHeader(projectForm());
    
     projGridRefresh(wallet.walletArray);
-    //listen(wallet);
+    
     
     // 1. layout
     // 2. project form
@@ -160,6 +160,7 @@ const projScreen = (proj) => {
     
     appendBody(projMainDiv());
     appendBodyHeader(itemForm());
+    itemFormListener(proj);
 
     
     

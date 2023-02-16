@@ -22,6 +22,19 @@ const projectFormListener = (wallet) => {
     });
 };
 
+const itemFormListener = (proj) => {
+    const itemForm = document.getElementById("item-form");
+
+    itemForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        console.log(event.target[0].value);
+
+        event.target[0].value = "";
+        event.target[0].focus();
+        
+    });
+};
+
 
 /// OK
 // the following two event listeners need to be combined in to one
@@ -57,6 +70,8 @@ const projGridListener = (wallet) => {
     });
 };
 
+
+
 const sideBarListener = (wallet) => {
     const sideBar = document.getElementById("side-bar-div");
     sideBar.addEventListener("click", (event) => {
@@ -82,4 +97,4 @@ const listen = (wallet) => {
     
 };
 
-export { listen }
+export { listen, itemFormListener }
