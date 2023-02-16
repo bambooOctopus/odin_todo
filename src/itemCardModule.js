@@ -11,9 +11,11 @@ const itemCard = (item, index) => {
     const buttonDiv = document.createElement("div");
     const toggleBtn = document.createElement("button");
     toggleBtn.textContent = "complete";
+    toggleBtn.classList.add("submit-btn");
     const deleteBtn = document.createElement("button");
-    deleteBtn.textContent = "delete item";
+    deleteBtn.textContent = "delete";
     deleteBtn.style.marginLeft = "1rem";
+    deleteBtn.classList.add("delete-btn");
     buttonDiv.appendChild(toggleBtn);
     buttonDiv.appendChild(deleteBtn);
 
