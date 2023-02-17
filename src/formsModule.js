@@ -14,7 +14,7 @@ const projectForm = () => {
     
 
     const textInput = document.createElement("input");
-    textInput.required = true;    
+    textInput.required = true;      
     textInput.placeholder = "project name"
     textInput.classList.add("text-input");
     textInput.name = "project-name";
@@ -58,6 +58,7 @@ const itemForm = () => {
     textInput.name = "item-name";
     textInput.id = "item-name";
     textInput.required = true;
+    
     
 
     const submitBtn = document.createElement("input");

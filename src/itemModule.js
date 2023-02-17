@@ -1,10 +1,13 @@
 const createItem = (itemTitle) => {
     const title = itemTitle;
+    const status = false;
+
+    
     
 
     
 
-    return { title  }
+    return {title, status }
 
 };
 

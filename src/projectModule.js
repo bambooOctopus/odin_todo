@@ -1,5 +1,5 @@
 import { projMainDivRefresh } from "./domUpdateModule";
-import { createItem } from "./itemModule";
+import { createItem, toggle } from "./itemModule";
 
 const project = (projectTitle) => {
     const title = projectTitle;
@@ -18,9 +18,24 @@ const project = (projectTitle) => {
 
     };
 
+    const toggleItemStatus = (itemId) => {   
+
+        const toggleItem = itemArray[itemId];        
+
+        if (toggleItem.status === false) {
+            toggleItem.status = true;
+        }
+        else {
+            toggleItem.status = false;
+        }    
+        
+        console.log(toggleItem);
+        
+    };
+
     
 
-    return { title, itemArray, addItem, removeItem }
+    return { title, itemArray, addItem, removeItem, toggleItemStatus }
 
 };
 

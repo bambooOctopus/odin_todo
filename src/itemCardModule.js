@@ -12,6 +12,7 @@ const itemCard = (item, index) => {
     const buttonDiv = document.createElement("div");
     const toggleBtn = document.createElement("button");
     toggleBtn.textContent = "complete";
+    toggleBtn.id = "toggle-status-" + index;
     toggleBtn.classList.add("submit-btn");
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "delete";

@@ -1,4 +1,4 @@
-import { project, addItem, removeItem } from "./projectModule";
+import { project, addItem, removeItem, toggleItemStatus } from "./projectModule";
 
 import { projScreen, homeScreen } from "./domUpdateModule";
 
@@ -88,6 +88,12 @@ const itemDivListener = (proj) => {
         if (eventType[0] === "delete") {
             proj.removeItem(eventType[2]);
 
+        }
+        else if (eventType[0] === "toggle") {
+            console.log("supposed to toggle");
+            console.log(eventType[2]);
+            proj.toggleItemStatus(eventType[2]);
+            console.log("supposed to toggle");
         }
         
     });
