@@ -111,6 +111,14 @@
     transition: 0.2s ease-in;
 }
 
+.complete {
+    border: solid 1px lightgreen;
+}
+
+.incomplete {
+    border: solid 1px red;
+}
+
 .proj-card:hover {
     border: solid 1px black;
     border-radius: 6px;
@@ -177,7 +185,7 @@
 }
 
 .item-card {
-    border: solid 1px lightgreen;
+    
     padding: 1rem 5rem;
     display: flex;
     flex-direction: row;

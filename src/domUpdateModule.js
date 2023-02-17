@@ -132,6 +132,16 @@ const projMainDivRefresh = (itemArray) => {
         // iterate over the array
         itemArray.forEach((item, index) => {
             let card = itemCard(item, index);
+
+            if (item.status === false) {
+                card.classList = "item-card";
+                card.classList.add("incomplete");
+            }
+            else {
+                card.classList = "item-card";
+                card.classList.add("complete");
+            }
+
             itemDiv.appendChild(card);
 
         });

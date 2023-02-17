@@ -27,9 +27,9 @@ const project = (projectTitle) => {
         }
         else {
             toggleItem.status = false;
-        }    
+        }   
         
-        console.log(toggleItem);
+        projMainDivRefresh(itemArray);
         
     };
 
