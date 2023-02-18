@@ -163,7 +163,7 @@ const homeScreen = (wallet) => {
     contentDiv.innerHTML = "";
     layOut();
     appendBody(projGridDiv());
-    appendBodyHeader(projectForm());
+    // appendBodyHeader(projectForm());
    
     projGridRefresh(wallet.walletArray);
     
