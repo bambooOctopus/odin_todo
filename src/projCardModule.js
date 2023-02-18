@@ -32,7 +32,7 @@ const projMainCard = (proj, index) => {
 
     const header = document.createElement("div");
     const headerTitle = document.createElement("p");    
-    headerTitle.textContent = proj.title;
+    headerTitle.textContent = "        ";
     headerTitle.classList.add("big-letters");
     header.appendChild(headerTitle);
 

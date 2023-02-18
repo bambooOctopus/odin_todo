@@ -55,10 +55,33 @@ const bodyHeader = () => {
     return bodyHeader
 }
 
-const formHeader = () => {
+// fired from appendBody()
+const formHeader = (element) => {
+
+    
+    
+    // proj || main
+
     const formHeader = document.createElement("div");
     formHeader.classList.add("form-header-div");
     formHeader.id = "form-header-div";
+
+    const elementType = element.id.split("-")[0];
+
+    if (elementType === "proj") {
+        const form = projectForm();
+        formHeader.appendChild(form);
+
+    }
+    else if (elementType === "main") {
+        const form = itemForm();
+        formHeader.appendChild(form);
+    };
+
+
+    
+    
+    
 
     return formHeader;
 }
@@ -84,8 +107,10 @@ const appendBody = (element) => {
     
     bodyDiv.innerHTML = "";
     bodyDiv.appendChild(bodyHeader());
-    bodyDiv.appendChild(formHeader());
+    bodyDiv.appendChild(formHeader(element));
     bodyDiv.appendChild(element);
+
+    console.log(element);
 };
 
 const appendBodyHeader = (element) => {
@@ -205,7 +230,10 @@ const projScreen = (proj) => {
     
     
     appendBody(projMainDiv());
-    appendBodyHeader(itemForm());
+
+    const projH2 = document.createElement("h2");
+    projH2.textContent = proj.title;
+    appendBodyHeader(projH2);
     
 
     
