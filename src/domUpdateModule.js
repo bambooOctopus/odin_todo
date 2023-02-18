@@ -55,6 +55,16 @@ const bodyHeader = () => {
     return bodyHeader
 }
 
+const formHeader = () => {
+    const formHeader = document.createElement("div");
+    formHeader.classList.add("form-header-div");
+    formHeader.id = "form-header-div";
+
+    return formHeader;
+}
+
+
+
 const body = () => {
     const bodyDiv = document.createElement("div");
     bodyDiv.classList.add("body-div");
@@ -74,6 +84,7 @@ const appendBody = (element) => {
     
     bodyDiv.innerHTML = "";
     bodyDiv.appendChild(bodyHeader());
+    bodyDiv.appendChild(formHeader());
     bodyDiv.appendChild(element);
 };
 
@@ -164,6 +175,10 @@ const homeScreen = (wallet) => {
     layOut();
     appendBody(projGridDiv());
     // appendBodyHeader(projectForm());
+
+    const projectH2 = document.createElement("h2");
+    projectH2.textContent = "projects";
+    appendBodyHeader(projectH2);
    
     projGridRefresh(wallet.walletArray);
     

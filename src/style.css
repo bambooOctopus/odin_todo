@@ -50,7 +50,19 @@
     padding: 0rem 1rem; 
 }
 
+.form-header-div {
+    height: 10%;
+    width: 70%;
+    border: solid 1px gray;
+    display: flex;
+    align-items: center;
+    padding: 0rem 1rem; 
+
+}
+
 .body-div {
+
+    
     grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 2;
@@ -64,7 +76,7 @@
 /* project index view */
 .proj-grid-div {      
     height: 600px;
-    width: 66%;
+   width: 66%;
     
     
     
