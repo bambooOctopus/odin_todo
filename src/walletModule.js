@@ -8,18 +8,14 @@ const wallet = () => {
         projGridRefresh(walletArray);
     };
 
-    const removeProject = (projId) => {
-        console.log(projId);
+    const removeProject = (projId) => {        
         walletArray.splice(projId, 1);
         projGridRefresh(walletArray);
 
     };
 
     const getProject = (index) => {
-        const project = walletArray[index];
-        console.log("index from get project----------------------");
-        console.log(index)
-        console.log("-----------------------------------")
+        const project = walletArray[index];    
         return project
     };
 

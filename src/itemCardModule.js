@@ -1,7 +1,5 @@
 const itemCard = (item, index) => {
-    console.log("-------------------------------------------");
-    console.log(item);
-    console.log("-------------------------------------------");
+   
     const card = document.createElement("div");
     card.classList.add("item-card");
     card.id = "item-card-" + index;

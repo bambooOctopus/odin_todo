@@ -9,7 +9,7 @@ const todo = () => {
     
 
     const home = () => {        
-        console.log("#home");
+        
         homeScreen(projectWallet);  
         listen(projectWallet);     
 
@@ -20,8 +20,7 @@ const todo = () => {
     };
 
     const proj = () => {
-        //project page displaying all it's items
-        console.log("#proj");
+        //project page displaying all it's items        
         projScreen();
     };
 

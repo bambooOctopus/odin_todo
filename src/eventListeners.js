@@ -8,14 +8,14 @@ const projectFormListener = (wallet) => {
 
     projectForm.addEventListener("submit", (event) => {
         event.preventDefault();
-        console.log(event.target[0].value);
+        
         // 1. use above console log value as title for project;
         const newProj = project(event.target[0].value);
         // 2. add the project to the wallet;
         wallet.addProject(newProj);
         // 3. should update the projDiv dom with new project obj;
 
-        console.log(wallet);
+        
         event.target[0].value = "";
         event.target[0].focus();
         
@@ -29,7 +29,7 @@ const itemFormListener = (proj) => {
 
     itemForm.addEventListener("submit", (event) => {
         event.preventDefault();
-        console.log(event.target[0].value);
+        
 
         proj.addItem(event.target[0].value)
 
@@ -55,11 +55,11 @@ const projGridListener = (wallet) => {
     projGrid.addEventListener("click", (event) => {
         const splitId = event.target.id.split("-")
         const projCardId = splitId[0] + splitId[1];
-        console.log(projCardId)
+       
        
 
         if (event.target.nodeName == "BUTTON") {
-            console.log("this is a button: " + event.target.id); 
+       
             
             // 1. remove this element from the wallet
             const projId = event.target.id.split("-")[2];            
@@ -75,25 +75,18 @@ const projGridListener = (wallet) => {
 };
 
 const itemDivListener = (proj) => {
-    const itemDiv = document.getElementById("item-div");
-    console.log("--------------------------------------");
-    console.log("ITEM DIV ");
-    console.log(itemDiv);
-    console.log("--------------------------------------");
+    const itemDiv = document.getElementById("item-div");    
     itemDiv.addEventListener("click", (event) => {
         
 
-        console.log(event.target);
+        
         const eventType = event.target.id.split("-");        
         if (eventType[0] === "delete") {
             proj.removeItem(eventType[2]);
 
         }
-        else if (eventType[0] === "toggle") {
-            console.log("supposed to toggle");
-            console.log(eventType[2]);
-            proj.toggleItemStatus(eventType[2]);
-            console.log("supposed to toggle");
+        else if (eventType[0] === "toggle") {        
+            proj.toggleItemStatus(eventType[2]);            
         }
         
     });
