@@ -44,7 +44,7 @@
 .body-header-div {
     height: 10%;
     width: 70%;
-    border: solid 2px black;
+    border: solid 1px gray;
     display: flex;
     align-items: center;
     padding: 0rem 1rem; 
@@ -57,23 +57,32 @@
     grid-column-end: 3;   
 
     padding: 1rem;
-    background-color: orange;
+    
     overflow: scroll;
 }
 
 /* project index view */
-.proj-grid-div {  
-    width: 100%;     
+.proj-grid-div {      
+    height: 600px;
+    width: 66%;
+    
+    
+    
+    
+    border: solid 1px gray;
       
     display: grid;
-    grid-template-columns: repeat(5, 200px);
-    grid-template-rows: repeat(12, 200px);
-    overflow: scroll;    
+    grid-template-columns: repeat(5, 200px);    
+    grid-auto-rows: 200px;
+    overflow: scroll;  
+    row-gap: 1rem;  
 
-    column-gap: 2.25rem;
-    row-gap: 1.5rem;
+    
+    
 
-    padding: 2rem 0rem 0rem;
+    padding: 1rem 3rem 0rem;
+
+    
 
     
 }
@@ -112,11 +121,11 @@
 }
 
 .complete {
-    border: solid 1px lightgreen;
+    border: solid 2px lightgreen;
 }
 
 .incomplete {
-    border: solid 1px red;
+    border: solid 2px orange;
 }
 
 .proj-card:hover {
@@ -151,7 +160,7 @@
     
     padding: 1rem 3rem 0rem;
     
-    border: solid 1px black;
+    border: solid 1px gray;
 
     display: flex;
     flex-direction: column;
