@@ -133,6 +133,8 @@
     flex-direction: column;
     
     transition: 0.2s ease-in;
+
+    cursor: pointer;
 }
 
 .complete {
@@ -190,11 +192,14 @@
     border: none;
 
     transition: 0.2s ease-in;
+
+    cursor: pointer;
 }
 
 .home-btn:hover {
     border: none;
     transform: scale(1.1);
+    color: gray;
 }
 
 .item-div {
@@ -209,6 +214,8 @@
     margin-top: 1rem;
 
     overflow: scroll;
+
+    padding-left: 2rem;
 }
 
 .item-card {
