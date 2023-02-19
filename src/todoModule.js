@@ -2,6 +2,7 @@ import { wallet } from "./walletModule.js";
 import { homeScreen, projScreen } from "./domUpdateModule.js";
 import { listen } from "./eventListeners.js";
 
+
 //fired off in index.js
 const todo = () => {
     const projectWallet = wallet();

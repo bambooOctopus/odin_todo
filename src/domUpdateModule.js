@@ -110,7 +110,7 @@ const appendBody = (element) => {
     bodyDiv.appendChild(formHeader(element));
     bodyDiv.appendChild(element);
 
-    console.log(element);
+    
 };
 
 const appendBodyHeader = (element) => {
