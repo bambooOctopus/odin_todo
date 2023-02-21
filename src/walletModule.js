@@ -21,6 +21,7 @@ const wallet = () => {
     const removeProject = (projId) => {        
         walletArray.splice(projId, 1);
         projGridRefresh(walletArray);
+        saveWallet(walletArray)
 
     };
 
