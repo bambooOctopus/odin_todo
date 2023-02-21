@@ -110,7 +110,7 @@ const appendBody = (element) => {
     bodyDiv.appendChild(formHeader(element));
     bodyDiv.appendChild(element);
 
-    console.log(element);
+    
 };
 
 const appendBodyHeader = (element) => {
@@ -137,6 +137,8 @@ const projGridRefresh = (wallet) => {
     // 2. then go through the wallet array and populate the grid
 
     const projDiv = document.getElementById("proj-grid-div");
+
+    
    
     projDiv.innerHTML = "";
    
