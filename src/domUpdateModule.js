@@ -137,6 +137,8 @@ const projGridRefresh = (wallet) => {
     // 2. then go through the wallet array and populate the grid
 
     const projDiv = document.getElementById("proj-grid-div");
+
+    
    
     projDiv.innerHTML = "";
    

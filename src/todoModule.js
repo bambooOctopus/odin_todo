@@ -1,11 +1,16 @@
 import { wallet } from "./walletModule.js";
 import { homeScreen, projScreen } from "./domUpdateModule.js";
 import { listen } from "./eventListeners.js";
+import { loadWallet } from "./saveWalletModule.js";
 
 
 //fired off in index.js
 const todo = () => {
-    const projectWallet = wallet();
+    // older version: const projectWallet = wallet();
+    console.log("hey")
+    const projectWallet = loadWallet("wallet");
+    console.log("yo")
+    
     
     
 
